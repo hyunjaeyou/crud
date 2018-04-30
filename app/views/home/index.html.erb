@@ -1,0 +1,16 @@
+<h1>메인페이지입니다. 글 목록이 이곳에 표시될 예정입니다</h1>
+
+<a href="/home/new">글 쓰러가기 </a>
+
+<br>
+
+<% @posts.each do |x| %>
+<%= x.id%> 번 게시물 : <br>
+제목 : <%= x.title%> <br>
+내용 : <%= x.content%> <br>
+------------------------<br>
+<a href= "home/show/<%=x.id%>"> 들어가보기</a> <br>
+<a href= "home/destroy/<%=x.id%>"> 파괴</a> <br>
+<a href= "home/edit/<%=x.id%>"> 체인지</a> <br>
+<%end%>
+
